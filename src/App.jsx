@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar"
 import Products from "./components/Products/Products"
 import Stats from "./components/Stats/Stats"
 import Steps from "./components/Steps/Steps"
+import PrisingTable from "./components/PrisingTable/PrisingTable"
 
 const fetchProduct = async () => {
   const res = await fetch("/products.json")
@@ -52,7 +53,7 @@ const App = () => {
         <Products view={view} checkout={checkout} total={total} isInCart={isInCart} removeFromCart={removeFromCart} handleAddToCart={handleAddToCart} setView={setView} cart={cart} productPromise={productPromise}></Products>
       </Suspense>
       <Steps/>
-
+      <PrisingTable/>
     </div>
   )
 }
