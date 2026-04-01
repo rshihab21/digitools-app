@@ -1,16 +1,22 @@
-# React + Vite
+# DigiTools APP
+A modern and responsive product listing & cart system built with React and Tailwind CSS. This project demonstrates real world frontend concepts like component based architecture, state management, API fetching, and interactive UI behavior.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🛠️ Technologies Used
+- ⚛️ React.js  
+- 🎨 Tailwind CSS  
+- 📜 JavaScript (ES6+)  
+- 🌐 Fetch API  
+- 🔁 React Hooks  
 
-Currently, two official plugins are available:
+## Key Features
+### 🛍️ Interactive Cart System
+Users can easily add products to the cart, remove items, and view real time updates. The navbar dynamically displays total price and item count, providing a smooth shopping experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 🔄 Product & Cart View Toggling
+Seamless switching between the product listing page and the cart view. This ensures a clean and user-friendly interface without unnecessary page reloads.
 
-## React Compiler
+### 🔄 🔔 Smart UI Feedback (Toast & Button State)
+- Toast notifications provide instant feedback on user actions (add, remove, checkout).
+- Buy Now button updates dynamically to reflect selected items, improving usability and interaction clarity.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

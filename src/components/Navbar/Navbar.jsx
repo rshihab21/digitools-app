@@ -55,10 +55,10 @@ const Navbar = ({ cart, setView }) => {
             <div className="navbar-end gap-4">
 
                 <span>
-                    {cart.length === 0 ? <img src={shoppingimg} /> : "🛍️"}
+                    {cart.length === 0 ? <img src={shoppingimg} /> : <img src={shoppingimg} />}
                 </span>
                 {cart.length > 0 && (
-                    <span className="absolute top-2 left-[1340px] bg-red-500 text-white text-xs px-2 rounded-full">
+                    <span className="absolute right-45 top-2 md:right-45  bg-red-500 text-white text-xs px-2 rounded-full">
                         {cart.length}
                     </span>
                 )}

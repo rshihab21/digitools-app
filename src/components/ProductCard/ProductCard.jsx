@@ -34,7 +34,7 @@ const ProductCard = ({ product, handleAddToCart, isInCart }) => {
                     </div>
                     <button onClick={() => handleAddToCart(product)} className={`w-full py-3 rounded-full text-white font-medium bg-gradient-to-r  hover:opacity-90 transition cursor-pointer ${isInCart(product.id) ? "bg-green-500" : "bg-purple-600"
                         } `}>
-                        {isInCart(product.id) ? "Added" : "Buy Now"}
+                        {isInCart(product.id) ? "Added to Cart" : "Buy Now"}
                     </button>
                 </div>
 
