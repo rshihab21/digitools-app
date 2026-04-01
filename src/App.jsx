@@ -7,7 +7,7 @@ import Steps from "./components/Steps/Steps"
 import PrisingTable from "./components/PrisingTable/PrisingTable"
 import CtaSection from "./components/CtaSection/CtaSection"
 import Footer from "./components/Footer/Footer"
-
+import toast, { Toaster } from 'react-hot-toast';
 const fetchProduct = async () => {
   const res = await fetch("/products.json")
   return res.json()
@@ -22,15 +22,18 @@ const App = () => {
   const handleAddToCart = (product) => {
     if (!cart.find((item) => item.id === product.id)) {
       setCart([...cart, product]);
+      toast.success(`${product.name} Successfully added!`)
     }
   }
 
   const removeFromCart = (id) => {
     setCart(cart.filter((item) => item.id !== id));
+    toast.success(`Product is Successfully Remove!`)
   };
 
   const checkout = () => {
     setCart([]);
+    toast.success(`Checkout is done!`)
   };
 
   const total = cart.reduce((sum, item) => sum + item.price, 0);
@@ -58,6 +61,7 @@ const App = () => {
       <PrisingTable/>
       <CtaSection/>
       <Footer/>
+      <Toaster />
     </div>
   )
 }
