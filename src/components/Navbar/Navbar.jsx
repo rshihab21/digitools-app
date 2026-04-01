@@ -1,7 +1,7 @@
 import digiLogo from "../../assets/DigiTools.png"
 import Links from "./Links"
 import shoppingimg from "../../assets/products/shopping-cart.png"
-const Navbar = () => {
+const Navbar = ({ cart, setView }) => {
 
     const menu = [
         {
@@ -30,8 +30,8 @@ const Navbar = () => {
             "path": "/faq"
         }
     ]
-    const navMenu=menu.map(nav=> <Links key={nav.id} nav={nav}></Links>)
-   
+    const navMenu = menu.map(nav => <Links key={nav.id} nav={nav}></Links>)
+
     return (
         <div className="navbar bg-base-100 container mx-auto my-4">
             <div className="navbar-start">
@@ -53,7 +53,15 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-                <img src={shoppingimg} alt="" />
+
+                <span>
+                    {cart.length === 0 ? <img src={shoppingimg} /> : "🛍️"}
+                </span>
+                {cart.length > 0 && (
+                    <span className="absolute top-2 left-[1340px] bg-red-500 text-white text-xs px-2 rounded-full">
+                        {cart.length}
+                    </span>
+                )}
                 <a className="cursor-pointer">Login</a>
                 <button className="btn btn-primary rounded-full">Get Started</button>
             </div>
