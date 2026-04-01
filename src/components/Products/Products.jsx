@@ -30,7 +30,7 @@ const Products = ({ productPromise, view, cart, handleAddToCart,setView,removeFr
             </div>
 
             {
-                view === "products" && (<div className="grid grid-cols-3 gap-4">
+                view === "products" && (<div className="grid md:grid-cols-3 gap-4">
                     {
                         productsData.map(product => <ProductCard isInCart={isInCart} handleAddToCart={handleAddToCart} product={product}></ProductCard>)
                     }
