@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoCartOutline } from 'react-icons/io5'
 
 const Cart = ({ cart,total,removeFromCart,checkout }) => {
     return (
@@ -6,7 +7,10 @@ const Cart = ({ cart,total,removeFromCart,checkout }) => {
             <h2 className="text-lg font-semibold text-gray-800 mb-6">Your Cart</h2>
 
             {cart.length === 0 ? (
-                <p className="text-gray-500">Cart is empty</p>
+                <>
+                <span className='flex items-center justify-center text-5xl text-gray-300'><IoCartOutline /></span>
+                <p className="text-gray-500 text-center">Cart is empty</p>
+                </>
             ) : (
                 <>
                     {cart.map((item) => (
