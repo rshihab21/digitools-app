@@ -4,6 +4,7 @@ A modern and responsive product listing & cart system built with React and Tailw
 ## 🛠️ Technologies Used
 - ⚛️ React.js  
 - 🎨 Tailwind CSS  
+- 🎨 Daisy UI 
 - 📜 JavaScript (ES6+)  
 - 🌐 Fetch API  
 - 🔁 React Hooks  
