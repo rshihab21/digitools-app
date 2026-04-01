@@ -3,6 +3,7 @@ import Banner from "./components/Banner/Banner"
 import Navbar from "./components/Navbar/Navbar"
 import Products from "./components/Products/Products"
 import Stats from "./components/Stats/Stats"
+import Steps from "./components/Steps/Steps"
 
 const fetchProduct = async () => {
   const res = await fetch("/products.json")
@@ -50,6 +51,7 @@ const App = () => {
       <Suspense fallback={<span className="loading loading-dots loading-md"></span>}>
         <Products view={view} checkout={checkout} total={total} isInCart={isInCart} removeFromCart={removeFromCart} handleAddToCart={handleAddToCart} setView={setView} cart={cart} productPromise={productPromise}></Products>
       </Suspense>
+      <Steps/>
 
     </div>
   )
