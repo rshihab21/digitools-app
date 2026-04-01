@@ -5,6 +5,7 @@ import Products from "./components/Products/Products"
 import Stats from "./components/Stats/Stats"
 import Steps from "./components/Steps/Steps"
 import PrisingTable from "./components/PrisingTable/PrisingTable"
+import CtaSection from "./components/CtaSection/CtaSection"
 
 const fetchProduct = async () => {
   const res = await fetch("/products.json")
@@ -54,6 +55,7 @@ const App = () => {
       </Suspense>
       <Steps/>
       <PrisingTable/>
+      <CtaSection/>
     </div>
   )
 }
